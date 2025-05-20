@@ -13,7 +13,7 @@ def menu():
     [q] Sair
 
     => """
-    return input(menu)
+    return input(textwrap.dedent(menu))
 
 def depositar(saldo, valor, extrato,/):
     if valor > 0:
@@ -104,7 +104,7 @@ def main():
 
     while True:
 
-        opcao = input(menu())
+        opcao = menu()
 
         if opcao == "d":
             valor = float(input("Informe o valor do depósito: "))
